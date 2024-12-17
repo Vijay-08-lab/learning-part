@@ -33,7 +33,7 @@ return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase(); // first i us
 console.log(getInProperCase(name))
 
 let ids = 'boorks'
-const properCase = (ids) => {
-    return ids.charAt(0).toUpperCase() + ids.slice(0).toLowerCase()
+const properCase = (ids) => { // so here is am using arrow fucntion you can use this function by calling a const variable properCase to use the function.
+    return ids.charAt(0).toUpperCase() + ids.slice(1).toLowerCase()
 }
 console.log(properCase(ids))
