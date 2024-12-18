@@ -37,7 +37,7 @@ const properCase = (ids) => { // so here is am using arrow fucntion you can use 
     return ids.charAt(0).toUpperCase() + ids.slice(1).toLowerCase()
 }
 console.log(properCase(ids))
-*/
+
 // Array //
 
 // task is to get the last index of array value to be print
@@ -60,4 +60,52 @@ myArray.shift() // now i am deleteing the first element
 console.log(myArray)
 myArray.splice(1,1); // so using splice method i deleted the value 200. splice method ( starting index number,deleting count)
 console.log(myArray)
+
+let player = 'rock'
+let computer = ''
+const computerchoice = () => {
+    let computerarr = ['rock','paper','sisscor']
+    let comgen = Math.floor(Math.random() * 3)
+    let matches =computerarr[comgen]
+    return matches
+}
+console.log(computerchoice())
+
+let player = 'rock'
+let computerarr = ['rock','sisscor','paper']
+const computerchoice = (computerarr) => {
+   const computergen = Math.floor(Math.random()*3)
+   return computerarr[computergen]
+}
+let computer =  computerchoice((computerarr))
+// in this part i used ternary operator.
+let result = player === 'rock' && computer === 'rock' ? `player : ${player} game tie  computer : ${computer}` :
+player === 'rock' && computer === 'sisscor' ? `player : ${player} Player Wins!  computer : ${computer}` :
+player === 'paper' && computer === 'rock' ? `player : ${player} Player Wins!  computer : ${computer}` :
+player === 'sisscor' && computer === 'paper' ? `player : ${player} Player Wins!  computer : ${computer}` : `Computer Wins! computer : ${computer}`;
+
+console.log(result);
+
+// in this part i used if else if  for the core part
+// if(player === 'rock' && computer === 'rock')
+// {
+//     console.log("match tie!")
+// }
+// else if( player === 'rock' && computer === 'sisscor')
+// {
+//     console.log('Player Win!')
+// }
+// else if(player === 'sisscor' && computer === 'paper')
+// {
+//     console.log("player win!")
+// }
+// else if(player === 'paper' && computer === 'rock')
+// {
+//     console.log("player win!")
+// }
+// else {
+//     console.log("Computer wins")
+// }
+*/
+
 
