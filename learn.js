@@ -147,7 +147,7 @@ return fruits
 console.log(`${fruitbasket().name} This is from function`)
 console.log(`${fruitbasket().varient.bananaName4} This is from function`)
 console.log(fruitbasket().varient.action())
-*/
+
 const fruitbasketA = () => {
     const fruits = {
   name: 'banana',
@@ -171,7 +171,62 @@ console.log(fruitbasketA().varient.action())
 //  inheritance of object.
 const basket = () => {
     return Object.create(fruitbasketA().varient) // here i inherit the object which is from the another function fruitbasketA from above.
+    
 }
 
 const inherit = basket()
 console.log(inherit.action()) // i succeed the mission by creating a vaiable and used it to call the function from the action: object.
+
+
+const bike = {
+    dealer : 'sri Ganesh',
+
+    othersepc : function () {
+       return {
+        name : 'Yamaha',
+            model : 'ybr',
+        bikeyear : 2010,
+    }
+    }
+};
+console.log(bike.othersepc().model)
+console.log(bike.othersepc().name)
+
+// in this part i tried to inherit the otherspec form the bike and override the name part to yamaha to volvo.
+const car = Object.create(bike);
+car.dealer = 'sri lakshmi',
+car.othersepc = function(){
+    return {name: 'volvo'}
+}
+console.log(car.othersepc().name)
+*/
+// for in loop //
+
+const movie = {
+    actor : 'vijay',
+    production : 'Lyca',
+    moviename : 'kathi',
+    music : 'vijay antony'
+}
+movie.actress = "trisha"; // added new property in movie object
+//delete movie.actor // deleted the object propery actor
+console.log(movie.hasOwnProperty('actor')) // checking the deleted property in boolean method. result will be printed in boolean method.
+
+// print all the object key and values using for in loop. by assigning collection has variable.
+for (let collection in movie){
+    console.log(`${collection} ${movie[collection]}`)
+}
+
+//destructuring the objects
+const {actress : Myfavactress,moviename} = movie;
+console.log(Myfavactress,moviename);
+
+// function movieaward (music){ // here it takes full values of movie instead of music.
+//     return music;
+// }
+// console.log(movieaward(movie))
+
+function movieaward ({music}){ // when  we use a {} brackets for parameters it will take the value which we mentioned in the parameter instead of taking all the values.
+    return music;
+}
+console.log(movieaward(movie))
