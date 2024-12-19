@@ -168,9 +168,10 @@ return fruits
 }
 console.log(fruitbasketA().varient.action())
 
+//  inheritance of object.
 const basket = () => {
-    return Object.create(fruitbasketA().varient)
+    return Object.create(fruitbasketA().varient) // here i inherit the object which is from the another function fruitbasketA from above.
 }
 
 const inherit = basket()
-console.log(inherit.action())
+console.log(inherit.action()) // i succeed the mission by creating a vaiable and used it to call the function from the action: object.
