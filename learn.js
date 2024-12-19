@@ -106,6 +106,71 @@ console.log(result);
 // else {
 //     console.log("Computer wins")
 // }
+
+// Javascript objects by youtube balachandran //
+
+const fruits = {
+    name: 'banana',
+    kg : 20,
+    price : 120,
+    varient : {
+        bananaName1 : 'illakai',
+        bananaName2 : 'rasthalli',
+        bananaName3 : 'vazhaikai',
+        action: function() {
+            return "Hello world"
+        }
+    
+      }
+  };
+console.log(`${fruits.varient.bananaName1} This is from normal console`)
+console.log(`${fruits.varient.action()}`)
+
+const fruitbasket = () => {
+    const fruits = {
+  name: 'banana',
+  kg : 20,
+  price : 120,
+  varient : {
+    bananaName4 : 'illakai',
+    bananaName5 : 'rasthalli',
+    bananaName6: 'vazhaikai',
+    action: function() {
+        return "Hello world"
+    }
+
+  }
+
+};
+return fruits
+}
+console.log(`${fruitbasket().name} This is from function`)
+console.log(`${fruitbasket().varient.bananaName4} This is from function`)
+console.log(fruitbasket().varient.action())
 */
+const fruitbasketA = () => {
+    const fruits = {
+  name: 'banana',
+  kg : 20,
+  price : 120,
+  varient : {
+    bananaName4 : 'illakai',
+    bananaName5 : 'rasthalli',
+    bananaName6: 'vazhaikai',
+    action: function() {
+        return `i am calling the object inside ${this.bananaName4}`
+    }
 
+  }
 
+};
+return fruits
+}
+console.log(fruitbasketA().varient.action())
+
+const basket = () => {
+    return Object.create(fruitbasketA().varient)
+}
+
+const inherit = basket()
+console.log(inherit.action())
