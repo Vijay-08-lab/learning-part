@@ -199,7 +199,7 @@ car.othersepc = function(){
     return {name: 'volvo'}
 }
 console.log(car.othersepc().name)
-*/
+
 // for in loop //
 
 const movie = {
@@ -230,3 +230,91 @@ function movieaward ({music}){ // when  we use a {} brackets for parameters it w
     return music;
 }
 console.log(movieaward(movie))
+
+
+// task is to find  even number form the array
+
+const array = [1,2,3,4,5,6,7,8,9,10]
+
+ const calculation = () => {
+    for (let i = 0;i < array.length; i++)
+        {
+          if  (array[i] % 2 == 0)
+          {
+            console.log(array[i])
+          }
+    }
+ }
+ calculation() 
+
+ const calculationodd = () => {
+    for (let i = 0;i < array.length; i++)
+        {
+          if  (array[i] % 2 != 0)
+          {
+            console.log(array[i])
+          }
+    }
+ }
+ calculationodd();
+
+
+// class
+
+// what i have made is creating a class name called yamaha and it has two constructor properites and one function to print the output.
+  class yamaha {
+    constructor(model,engine){ // i am passing parameters for the property
+        this.engine = engine;
+        this.model = model;
+        // this.gears = '4 gears';
+        this.gears = [] // by creating a empty array will helps to store the different key values or element in the array 
+    }
+    //here i am going to use get and set method to chage the values fo the property
+  get transmission(){
+    return this.gears;
+  }
+  set transmission(speed){
+    //this.gears =speed;
+    this.gears.push(speed) // here i used push method() to store the key values.
+
+  }
+  bike(){
+    return console.log(`yamaha ${this.engine} are so refined and this ${this.model} gives more mileage and it has ${this.gears}`) // by using 'this."property"' keyword i can able to called the properties from the class.
+  }
+}
+
+const yamaha125 =  new yamaha('125cc','YBR') // here i create a new vaiable called yamaha125 and passed values to parameter.
+yamaha125.bike(); // while calling the function it will give the output with the keyvalue which we assigned.
+ const yamaha155 = new yamaha('155cc','R15')
+ yamaha155.transmission = '6 gears';
+ console.log(yamaha155.gears)
+ yamaha155.bike();
+*/ 
+
+
+class fruitbasket {
+    constructor(price){
+        this.fruit = 'apple';
+        this.quantity = quantity;
+        this.price = price;
+    }
+    get csvalue() {
+        this.price = this.csvalue;
+    }
+    set csvalue(csbargain) {
+        this.price = csbargain;    
+    }
+}
+
+class market extends fruitbasket {
+    constructor(quantity){
+        super(quantity)
+        this.location = 'vellore';
+    }
+    piceses (){
+        console.log(`our ${this.location} has nice place by ${this.fruit}`)
+    }
+}
+
+const customerchoice =  new  ('200')
+customerchoice.piceses();  
