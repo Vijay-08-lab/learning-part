@@ -318,3 +318,23 @@ class market extends fruitbasket {
 
 const customerchoice =  new  ('200')
 customerchoice.piceses();  
+
+class pizza {
+  constructor(size = 'small', flavour = 'peporinen'){
+      this.size = size;
+      this.flavour = flavour;
+  }
+  get pizzasize (){
+  
+      return this.size
+  }
+
+set pizzasize (size){
+this.size = size;   
+}
+  
+}
+const defaultpizza = new pizza()
+console.log(`i love ${defaultpizza.size} size pizza ${defaultpizza.flavour} very much `)
+const another = new pizza('medium','margarita')
+console.log(`i love ${another.pizzasize} size pizza ${another.flavour} very much `)
