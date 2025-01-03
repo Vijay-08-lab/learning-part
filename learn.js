@@ -367,7 +367,7 @@ class Spare extends yamaha {
   }
 }
 console.log(`yamaha ${this.industry} ${this.spare} is the one of the main divsion`)
-*/
+
 
 class Vehicles {
   constructor(transport)
@@ -393,3 +393,25 @@ class TwoWheeler extends Vehicles {
 
 const icEngine = new TwoWheeler('TVS Excel')
 console.log(`${icEngine.transportvc} ${icEngine.passagervc} is a ${icEngine.vctype} actual passager vechicle used for transporting goods also`)
+
+// note in class if an object is named _underscore at first means that we need to know that. that the property value is private don't change the value. in ES2022 that private property encrpt problem is solved with intorducing # in the front of the property. this make the property to be private. value can't be change outside.
+// class is the blue print of the object.
+
+
+//JSON//
+const myobj = {
+  name : 'vijay',
+  age : 29,
+  educationqualification : 'B.com, MBA',
+  location : 'chennai',
+}
+
+const sendJSON = JSON.stringify(myobj)
+console.log(sendJSON)
+const receiveJSON = JSON.parse(sendJSON)
+console.log(receiveJSON)
+*/
+//Errors and handling
+"use strict";
+ const car = "volvo";
+console.log(car);
