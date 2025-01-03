@@ -338,7 +338,7 @@ const defaultpizza = new pizza()
 console.log(`i love ${defaultpizza.size} size pizza ${defaultpizza.flavour} very much `)
 const another = new pizza('medium','margarita')
 console.log(`i love ${another.pizzasize} size pizza ${another.flavour} very much `)
-*/
+
 
 class yamaha {
   constructor(industry,type)
@@ -361,9 +361,35 @@ mIndustry.classified = 'sewing';
 console.log(`this is a ${mIndustry.industry} is one of the part in yamaha family`)
 
 class Spare extends yamaha {
-  constructor(industry,spare,type){
+  constructor(industry,spare,){
     super(industry,type)
     this.spare = 'motorcycle spare parts';
   }
 }
 console.log(`yamaha ${this.industry} ${this.spare} is the one of the main divsion`)
+*/
+
+class Vehicles {
+  constructor(transport)
+  {
+    this.transportvc = transport;
+    this.passagervc = 'car';
+  }
+  get transporter ()
+  {
+    return this.transportvc;
+  }
+  set transporter (goodsvc)
+  {
+    this.transportvc = goodsvc;
+  }  
+}
+class TwoWheeler extends Vehicles {
+  constructor(transport){
+    super(transport);
+    this.vctype = '2wheeler';
+  }
+}
+
+const icEngine = new TwoWheeler('TVS Excel')
+console.log(`${icEngine.transportvc} ${icEngine.passagervc} is a ${icEngine.vctype} actual passager vechicle used for transporting goods also`)
