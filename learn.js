@@ -289,7 +289,7 @@ yamaha125.bike(); // while calling the function it will give the output with the
  yamaha155.transmission = '6 gears';
  console.log(yamaha155.gears)
  yamaha155.bike();
-*/ 
+ 
 
 
 class fruitbasket {
@@ -338,3 +338,32 @@ const defaultpizza = new pizza()
 console.log(`i love ${defaultpizza.size} size pizza ${defaultpizza.flavour} very much `)
 const another = new pizza('medium','margarita')
 console.log(`i love ${another.pizzasize} size pizza ${another.flavour} very much `)
+*/
+
+class yamaha {
+  constructor(industry,type)
+  {
+    this.industry = industry;
+    this.type = type;
+  }
+  get classified ()
+  {
+    return this.industry;
+  }
+  set classified (cindustry)
+  {
+    this.industry = cindustry
+  }
+}
+const mIndustry = new yamaha('motor','manufaturing')
+console.log(`this is a ${mIndustry.industry} industry is one of the part in yamaha family`)
+mIndustry.classified = 'sewing';
+console.log(`this is a ${mIndustry.industry} is one of the part in yamaha family`)
+
+class Spare extends yamaha {
+  constructor(industry,spare,type){
+    super(industry,type)
+    this.spare = 'motorcycle spare parts';
+  }
+}
+console.log(`yamaha ${this.industry} ${this.spare} is the one of the main divsion`)
