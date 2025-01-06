@@ -413,5 +413,56 @@ console.log(receiveJSON)
 */
 //Errors and handling
 "use strict";
- const car = "volvo";
-console.log(car);
+//  const car = "volvo";
+// console.log(car);
+
+// const makeerror = () => {
+//   try{
+//     // const name = 'vijay'
+//     // name = 'ram'
+//     // console.log(name)
+// throw  new customerror('this a custom error');
+//   }
+//   catch(err)
+//   {
+//     //this are the type of errors//
+//     // console.error(err);
+//     // console.warn(err);
+//     // console.table(err);
+//     console.error(err.stack);
+//   }
+//   finally{
+//     console.log("....finally");
+//   }
+// }
+// makeerror();
+// // custom error//
+// const customerror = (message) =>
+// {
+//   this.message = message;
+//   this.name = 'custom error';
+//   this.stack = `${this.name}:${ this.message}`;
+
+// }
+
+
+// here i am going to use a while loop with the error handling.
+const makeerror = () =>{ // here i declared a function makeerror
+let i = 0; //declaring a value has 0 for while loop.
+while (i<=5){
+  try{
+    if (i %2 !==0){
+      throw new Error("odd number")
+    }
+    console.log('even number')
+  }
+  catch(err){
+    console.error(err.message)
+  }
+  finally{
+    console.log('....finally');
+    i++;
+  }
+}
+};
+makeerror();
