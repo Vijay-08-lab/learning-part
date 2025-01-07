@@ -25,3 +25,28 @@ navText.textContent = "!Hello World";
 navText.innerHTML = "<div>inserted</div>"
 console.log(evendivs[0])
 console.log(evendivs[0].parentElement)
+view1.style.display = 'none';
+view2.style.display = 'flex';
+console.log(view2.lastChild);
+
+const creatediv =(parent,iter) => {
+    const newdiv = document.createElement("div")
+    newdiv.textContent = iter;
+    newdiv.style.height = '100px';
+    newdiv.style.width = '100px';
+    newdiv.style.backgroundColor = 'yellow';
+    newdiv.style.color = 'black';
+    newdiv.style.display = 'flex';
+    newdiv.style.alignItems = 'center';
+    newdiv.style.justifyContent = 'center';
+    newdiv.style.margin = '10px';
+    parent.append(newdiv)
+}
+for(let i=1; i<11;i++){
+creatediv(view2,i);
+}
+
+// Event Listeners //
+//.addEventListener("",function,usercapture)
+ view1.classList.toggle() // toggle is used to change the data or style of element.
+ 
