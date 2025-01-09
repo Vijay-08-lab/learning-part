@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" > <!--to use dark mode you need to use 'class="dark"' on the html and need to configure in tailwind.config has pulgin need to config darkmode: "selector"-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="output.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-white dark:bg-black">
     <!--- Typography -->
     <!--<p class="font-sans">this is font-sans</p>
     <p class="font-mono">this is font-sans</p>
@@ -35,7 +35,42 @@
         <!--<button class=" absolute transform translate-y-3 bg-red-600 border rounded-xl p-2 m-2 hover:bg-green-400 hover:text-black">Click me!</button>
     </div>-->
     <!-- responsive Classes-->
-     <div>
+     <!--<div class="bg-gray-200 md:bg-green-200 lg:bg-red-200">
+        <p class="text-lg">Background color changes on screen size</p>
+     </div>-->
+     <!--Flexbox layout-->
+     <!--<div class="container flex flex-row justify-around">
+        <div class="bg-orange-500 border rounded-sm border-black">1box</div>
+        <div class="bg-white border rounded-sm border-black">2box</div>
+        <div class="bg-green-600 border rounded-sm border-black">3box</div>
      </div>
-</body>
+     <div class="container flex flex-col items-baseline">
+        <div class="bg-orange-500 border rounded-sm border-black">1box</div>
+        <div class="bg-white border rounded-sm border-black">2box</div>
+        <div class="bg-green-600 border rounded-sm border-black">3box</div>
+     </div>-->
+     <!---Flex Grow-->
+     <!--<div class="container flex flex-row">
+        <div class="bg-orange-500 flex-1 border rounded-sm border-black">1box</div>
+        <div class="bg-white flex-1 border rounded-sm border-black">2box</div>
+        <div class="bg-green-600 flex-1 border rounded-sm border-black">3box</div>
+     </div>-->
+     <!--Grid-->
+     <!--<div class="container grid grid-cols-3 gap-3">
+        <div class="bg-orange-500 flex-1 border rounded-sm border-black">1box</div>
+        <div class="bg-white flex-1 border rounded-sm border-black">2box</div>
+        <div class="bg-green-600 flex-1 border rounded-sm border-black">3box</div>
+        <div class="bg-orange-500 flex-1 border rounded-sm border-black">4box</div>
+        <div class="bg-white flex-1 border rounded-sm border-black">5box</div>
+        <div class="bg-green-600 flex-1 border rounded-sm border-black">6box</div>
+     </div>-->
+     <!--Dark Mode-->
+     <!--<div><button class="bg-slate-800 text-white p-2 m-10 border border-black rounded-sm dark:bg-slate-500 dark:text-black">Click me!</button></div>
+    -->
+     <!--Extend Options-->
+     <button class="selection">Colored</button>
+     <button class="selection">Colored</button>
+     <button class="selection">Colored</button>
+    </body>
+    <!---Tailwind Basics Over Good Luck-->
 </html>
