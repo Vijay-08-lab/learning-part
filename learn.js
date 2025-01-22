@@ -401,7 +401,7 @@ console.log(`${icEngine.transportvc} ${icEngine.passagervc} is a ${icEngine.vcty
 //JSON//
 const myobj = {
   name : 'vijay',
-  age : 29,
+  age : 29,                         
   educationqualification : 'B.com, MBA',
   location : 'chennai',
 }
@@ -447,7 +447,7 @@ console.log(receiveJSON)
 
 
 // here i am going to use a while loop with the error handling.
-const makeerror = () =>{ // here i declared a function makeerror
+/*const makeerror = () =>{ // here i declared a function makeerror
 let i = 0; //declaring a value has 0 for while loop.
 while (i<=5){
   try{
@@ -466,3 +466,49 @@ while (i<=5){
 }
 };
 makeerror();
+
+
+
+// print the second largest number
+let a  = [1,3,2,6,5,8,7,9,10,8]
+const cook = () => {
+   let b = a.sort((a,b)=> (a-b))
+   let c = a.sort((a,b)=>(b-a))
+   let cal =a.length-1
+
+   
+   console.log(`this shows in acending order ${b}`)
+   console.log(`this shows in descending order ${c}`)
+   console.log(`second largest number ${cal}`)
+   return 
+   
+}
+cook();
+
+
+
+ class yamaha {
+  constructor( industry,rawmaterials){
+    industry = this.industry
+    rawmaterials = this.rawmaterials
+  }
+     }
+*/
+
+
+const intApp = ()=>{
+const myContent = ['politics', 'social welfare', 'justice', 'economy']
+const myObj = {
+  name:'vijay',
+  myContent: ['politics', 'social welfare', 'justice', 'economy'],
+   function: myfun = () => {
+  console.log(this.name)
+  }
+}
+sessionStorage.setItem('myActivesession',JSON.stringify(myObj))
+const myActivesession = JSON.parse(sessionStorage.getItem('myActivesession'))
+console.log(myActivesession)
+};
+
+
+ 
