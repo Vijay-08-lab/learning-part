@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
 import Header from './Header';
 import Content from './Content';
@@ -13,7 +11,7 @@ function App() {
 //  return mood[randomchange] 
 //   }
   return (
-  <div>
+  <div className='App'>
     <Header />
     <Content />
     <Duplingtext />
