@@ -1,23 +1,58 @@
-import React from 'react'
-
+import { useState } from 'react';
+import { FaTrashAlt } from "react-icons/fa";
 const Content = () =>{
-const mindchange = () => {
-const mood = ['happy','sad','fraustrated','anger','gulit']
-const randomchange = Math.floor(Math.random()*mood.length)
-return mood[randomchange]
-};
-const handelClick = (name) => {
-console.log(`thanks for clicking me! ${name}`)
+    const [items, setItems] = useState(
+        [
+        {id:1,
+         checked: true,
+         item: "pratice Coding"
+
+    },
+    {
+        id:2,
+         checked: false,
+         item: "listening music"
+
+    },
+    {
+        id:3,
+         checked: false,
+         item: "watching movie"
+    },
+]);
+const handelCheck = (id) => {
+  const listitems = items.map((item)=>item.id===id ? {...item,checked:!item.checked} : item)
+  setItems(listitems)  
 }
-const handelClick2 = () => {
-    console.log(`you have clicked DoubleClick`)
+const handeldelete = (id) => {
+const newarr 
+
 }
+// const numbers = [1,2,3,4,5,6]
+// //const itemss = numbers.map(n => ({number:n}))
+// const itemss = numbers.filter(n => n>=3).map(n=>({number:n}))
+// console.log(itemss)
+
 return (
-    <div>
-    <p onDoubleClick={handelClick2}>I am in {mindchange()}</p>
-    <button onClick={()=>{handelClick('vijay')}}>Click me!</button>
-    </div>
+    <main>
+    <ul>
+        {items.map((item)=>(
+            <li className='item' key={item.id}>
+                <input
+                      type = "checkbox"
+                      onChange={()=>handelCheck(item.id)}
+                      checked ={item.checked}
+                />
+                <label>{item.item}</label>
+                <FaTrashAlt 
+                    role="button"
+                    onClick={()=>handeldelete(item.id)}
+                    tabIndex="0"
+                    />
+            </li>
+        ))}
+    </ul>
+    </main>
 )
 }
 export default Content;
-
