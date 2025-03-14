@@ -25,8 +25,9 @@ const handelCheck = (id) => {
   setItems(listitems)  
 }
 const handeldelete = (id) => {
-const newarr 
-
+const listitems = items.filter((item)=> 
+    item.id !== id)
+setItems(listitems)
 }
 // const numbers = [1,2,3,4,5,6]
 // //const itemss = numbers.map(n => ({number:n}))
